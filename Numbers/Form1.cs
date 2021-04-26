@@ -39,6 +39,44 @@ namespace Numbers
             richTextBox3.AppendText(c.ToString("N0") + "\n");
             richTextBox3.AppendText(c.ToString("0.000000000000000E0") + "\n");
             richTextBox3.AppendText(c.ToString("0.00E0") + "\n");
+
+            string s = "3";
+            string PI = "3.14159265";
+            int i = int.Parse(s);
+            double d = double.Parse(PI);
+
+            richTextBox4.AppendText(i.ToString() + "\n");
+            richTextBox4.AppendText(d.ToString() + "\n");
+
+            string st = "three";
+            try
+            {
+                int i2 = int.Parse(st);
+            }
+            catch
+            {
+                MessageBox.Show(st + " is not an integer");
+            }
+            string s2 = "3,2";
+            try
+            {
+                int i2 = int.Parse(s2);
+            }
+            catch
+            {
+                MessageBox.Show(s2 + " is not an integer");
+                int i2 = 0;
+            }
+
+            string s3 = "PI";
+            try
+            {
+                double d2 = double.Parse(s3);
+            }
+            catch
+            {
+                double d2 = 0;
+            }
         }
       
         private void Form1_Load(object sender, EventArgs e)
